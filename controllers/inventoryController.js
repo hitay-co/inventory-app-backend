@@ -5,7 +5,7 @@ const Inventory = require('../models/inventoryModel');
 // @route  GET /api/inventories
 // @access Public
 const getInventories = asyncHandler(async (req, res) => {
-  const inventories = await Inventory.find();
+  const inventories = await Inventory.find().sort('-updatedAt');
 
   res.status(200).json(inventories);
 });
