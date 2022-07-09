@@ -28,9 +28,7 @@ const createInventory = asyncHandler(async (req, res) => {
   });
 
   if (inventory) {
-    res.status(201).json({
-      inventory,
-    });
+    res.status(201).json(inventory);
   } else {
     res.status(400);
     throw new error('Invalid inventory data');
