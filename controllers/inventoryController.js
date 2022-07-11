@@ -27,12 +27,7 @@ const createInventory = asyncHandler(async (req, res) => {
     quantity,
   });
 
-  if (inventory) {
-    res.status(201).json(inventory);
-  } else {
-    res.status(400);
-    throw new error('Invalid inventory data');
-  }
+  res.status(201).json(inventory);
 });
 
 // @desc   Update Inventory
@@ -68,7 +63,7 @@ const deleteInventory = asyncHandler(async (req, res) => {
 
   await inventory.remove();
 
-  res.status(200).json({ success: true });
+  res.status(200);
 });
 
 module.exports = {

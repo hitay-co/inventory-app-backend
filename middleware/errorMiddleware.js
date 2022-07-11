@@ -1,6 +1,11 @@
 const errorHandler = (err, req, res, next) => {
-  const statusCode = res.statusCode || 500;
-  res.status(statusCode);
+  if (err.name === 'ValidationError') {
+    res.status(400);
+  } else {
+    const statusCode = res.statusCode || 500;
+    res.status(statusCode);
+  }
+
   res.json({
     message: err.message,
     stack: process.env.NODE_ENV !== 'production' && err.stack,
