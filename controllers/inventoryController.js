@@ -63,7 +63,7 @@ const deleteInventory = asyncHandler(async (req, res) => {
 
   await inventory.remove();
 
-  res.status(200);
+  res.status(200).json({});
 });
 
 module.exports = {
