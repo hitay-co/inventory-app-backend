@@ -6,7 +6,7 @@ Inventory App Backend project. Node.js, Express.js, MongoDB.
 
 ### Set Environment Variables
 
-Rename the .envexample to .env.development.local and add your [MongoDB](https://www.mongodb.com/) database URI.
+Rename the .envexample to .env and add your [MongoDB](https://www.mongodb.com/) database URI.
 
 ### Install backend dependencies
 
