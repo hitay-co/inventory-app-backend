@@ -1,6 +1,7 @@
 # Inventory App Backend
 
 Inventory App Backend project. Node.js, Express.js, MongoDB.
+Hosted with <a href="https://www.heroku.com/" target="_blank">Heroku</a>
 
 ## Usage
 
